@@ -56,8 +56,8 @@ public:
     /* calls into Wire.begin() */
     void begin();
 
-    /* for the ESP8266: Explicit SDA and SCL pins */
-#ifdef ARDUINO_ARCH_ESP8266
+    /* Explicit SDA and SCL pins */
+#if defined(ARDUINO_ARCH_ESP8266) || defined(ARDUINO_ARCH_ESP32)
     void begin(int sda, int scl);
 #endif
 

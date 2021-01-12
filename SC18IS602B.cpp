@@ -127,7 +127,7 @@ void SC18IS602B::begin() {
     Wire.begin();
 }
 
-#ifdef ARDUINO_ARCH_ESP8266
+#if defined(ARDUINO_ARCH_ESP8266) || defined(ARDUINO_ARCH_ESP32)
 void SC18IS602B::begin(int sda, int scl) {
     Wire.begin(sda, scl);
 }
